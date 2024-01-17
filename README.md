@@ -49,10 +49,12 @@ Replace the dataset_name, split_number and iter_number of the checkpoint of the 
 load_from = ('work_dirs/path/to/your/model.pth')
 ```
 One may need to change the split number, seed number, dataset name and number shots accordingly.
+
 3. Train the fine-tuning models:
 ```shell
 python tools/detection/train.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py
 ```
+
 4. If you would like to use a different seed number, e.g., 42, simply modifying the corresponding configuration file:
 ```shell
 seed = 42
