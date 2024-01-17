@@ -34,7 +34,8 @@ TODO: add support to NWPU-VHR10.v2 in Dataset4EO
 ```shell
 python tools/detection/train.py configs/st_fsod/{dataset_name}/split1/st-fsod_maskrcnn_r101_40k_{dataset_name}-split{split_number}_base-training.py
 ```
-3. Change the dataset_name and split_number accordingly. dataset_name should be one of "dior", "isaid" and "nwpu"
+
+2. Change the dataset_name and split_number accordingly. dataset_name should be one of "dior", "isaid" and "nwpu"
 
 ### Perform Few-shot Fine-tuning
 1. Convert the trained base model by initializing the bounding box head (this is require since we are following the two-stage fine-tuning process proposed in the TFA paper):
@@ -48,17 +49,28 @@ replace the dataset_name, split_number and iter_number of the checkpoint accordi
 load_from = ('work_dirs/path/to/your/model.pth')
 ```
 One may need to change the split number, seed number, dataset name and number shots accordingly.
-4. Train the fine-tuning models:
+3. Train the fine-tuning models:
 ```shell
 python tools/detection/train.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py
 ```
-5. If you would like to use a different seed number, e.g., 42, simply modifying the corresponding configuration file:
+4. If you would like to use a different seed number, e.g., 42, simply modifying the corresponding configuration file:
 ```shell
 seed = 42
 ```
 
 ## Evaluation
+1. Evaluate the base model
+```shell
+python tools/detection/test.py configs/st_fsod/dior/split1/st-fsod_maskrcnn_r101_40k_dior-split1_base-training.py --work-dir work_dirs/st-fsod_maskrcnn_r101_40k_dior-split1_base-training/iter_40000.pth
+```
+Change the dataset name, split number and iteration number of the checkpoint accordingly.
 
+2. Evaluate the fine-tuning model
+The evaluation script has the same format as above:
+```shell
+python tools/detection/test.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py --work-dir work_dirs/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning/iter_1000.pth --eval='mAP'
+```
+Note that one should choose the checkpoints to be evaluated according to the validation results (which can be seen in the training log). We noticed that the variances of the accuracies among different checkpoints are quite large, which indicates the validation process is neccessary.
 
 ## Acknowledgement
 https://github.com/EarthNets
