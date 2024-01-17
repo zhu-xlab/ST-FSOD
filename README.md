@@ -2,7 +2,7 @@
 Official implementation of TGRS paper: Few-shot Object Detection in Remote Sensing: Lifting the Curse of Incompletely Annotated Novel Objects
 
 ## Prepare the Datasets
-### Install Dataset4EO
+#### Install Dataset4EO
 We use Dataset4EO to handle our data loading. Dataset4EO is a composable data loading package based on TorchData. More information can be found at https://github.com/EarthNets/Dataset4EO.
 
 ```shell
