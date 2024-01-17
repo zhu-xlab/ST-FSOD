@@ -74,5 +74,7 @@ Note that one should choose the checkpoints to be evaluated according to the val
 
 ## Acknowledgement
 https://github.com/EarthNets
+
 https://github.com/open-mmlab/mmfewshot
+
 https://github.com/open-mmlab/mmdetection
