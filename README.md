@@ -38,7 +38,7 @@ python tools/detection/train.py configs/st_fsod/{dataset_name}/split1/st-fsod_ma
 2. Change the dataset_name and split_number accordingly. dataset_name should be one of "dior", "isaid" and "nwpu". Note that for DIOR dataset, the split1 in the configuration file corresponds to the split proposed in paper "Few-shot object detection on remote sensing images". Split2-5 correspond to the four splits proposed in "Prototype-cnn for few-shot object detection in remote sensing images".
 
 #### Perform Few-shot Fine-tuning
-1. Convert the trained base model by initializing the bounding box head (this is require since we are following the two-stage fine-tuning process proposed in the TFA paper):
+1. Convert the trained base model by initializing the bounding box head (this is required due to the fact that we are following the two-stage fine-tuning process proposed in the TFA paper):
 ```shell
 python tools/detection/misc/initialize_bbox_head.py --src1 work_dirs/st-fsod_maskrcnn_r101_40k_{dataset_name}-split{split_number}_base-training/iter_{iter_number}.pth --method random_init --save-dir work_dirs/path/to/your/model.pth --{dataset_name}
 ```
