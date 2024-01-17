@@ -61,13 +61,13 @@ seed = 42
 ```
 
 ## Evaluation
-1. Evaluate the base model
+#### Evaluate the base model
 ```shell
 python tools/detection/test.py configs/st_fsod/dior/split1/st-fsod_maskrcnn_r101_40k_dior-split1_base-training.py --work-dir work_dirs/st-fsod_maskrcnn_r101_40k_dior-split1_base-training/iter_40000.pth
 ```
 Change the dataset name, split number and iteration number of the checkpoint accordingly.
 
-2. Evaluate the fine-tuning model
+#### Evaluate the fine-tuning model
 The evaluation script has the same format as above:
 ```shell
 python tools/detection/test.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py --work-dir work_dirs/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning/iter_1000.pth --eval='mAP'
