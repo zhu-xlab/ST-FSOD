@@ -44,7 +44,7 @@ python tools/detection/misc/initialize_bbox_head.py --src1 work_dirs/st-fsod_mas
 ```
 replace the dataset_name, split_number and iter_number of the checkpoint accordingly.
 
-2. set the path to the converted base model in the configuration file in configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py
+2. set the path to the converted base model in the configuration file at configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py
 ```shell
 load_from = ('work_dirs/path/to/your/model.pth')
 ```
