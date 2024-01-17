@@ -19,8 +19,7 @@ torchvision==0.14.1
 mmcv==1.7.1
 ```
 
-####
-Install rsifewshot package by:
+#### Install rsifewshot package by:
 ```shell
 git clone https://github.com/zhu-xlab/ST-FSOD.git
 cd ST-FSOD
