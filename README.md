@@ -29,7 +29,23 @@ datapipe_root = 'path/to/your_datasets/DIOR'
 TODO: add support to NWPU-VHR10.v2 in Dataset4EO
 
 ## Perform Base Training
+1. Train the base model using script:
+```shell
+python tools/detection/train.py configs/st_fsod/{dataset_name}/split1/st-fsod_maskrcnn_r101_40k_{dataset_name}-split{split_number}_base-training.py
+```
+3. Change the dataset_name and split_number accordingly. dataset_name should be one of "dior", "isaid" and "nwpu"
 
 ## Perform Few-shot Fine-tuning
+1. Convert the trained base model by initializing the bounding box head:
+```shell
+python tools/detection/misc/initialize_bbox_head.py --src1 work_dirs/st-fsod_maskrcnn_r101_40k_{dataset_name}-split{split_number}_base-training/iter_{iter_number}.pth --method random_init --save-dir work_dirs/temp/ --{dataset_name}
+```
+replace the dataset_name, split_number and iter_number of the checkpoint accordingly.
 
 ## Evaluation
+
+
+## Acknowledgement
+https://github.com/EarthNets
+https://github.com/open-mmlab/mmfewshot
+https://github.com/open-mmlab/mmdetection
