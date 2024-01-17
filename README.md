@@ -35,14 +35,14 @@ TODO: add support to NWPU-VHR10.v2 in Dataset4EO
 python tools/detection/train.py configs/st_fsod/{dataset_name}/split1/st-fsod_maskrcnn_r101_40k_{dataset_name}-split{split_number}_base-training.py
 ```
 
-2. Change the dataset_name and split_number accordingly. dataset_name should be one of "dior", "isaid" and "nwpu"
+2. Change the dataset_name and split_number accordingly. dataset_name should be one of "dior", "isaid" and "nwpu". Note that for DIOR dataset, the split1 in the configuration file corresponds to the split proposed in paper "Few-shot object detection on remote sensing images". Split2-5 correspond to the four splits proposed in "Prototype-cnn for few-shot object detection in remote sensing images".
 
 #### Perform Few-shot Fine-tuning
 1. Convert the trained base model by initializing the bounding box head (this is require since we are following the two-stage fine-tuning process proposed in the TFA paper):
 ```shell
 python tools/detection/misc/initialize_bbox_head.py --src1 work_dirs/st-fsod_maskrcnn_r101_40k_{dataset_name}-split{split_number}_base-training/iter_{iter_number}.pth --method random_init --save-dir work_dirs/path/to/your/model.pth --{dataset_name}
 ```
-replace the dataset_name, split_number and iter_number of the checkpoint accordingly.
+Replace the dataset_name, split_number and iter_number of the checkpoint of the base model accordingly.
 
 2. set the path to the converted base model in the configuration file at configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py
 ```shell
