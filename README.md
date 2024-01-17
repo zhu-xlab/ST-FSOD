@@ -19,6 +19,14 @@ torchvision==0.14.1
 mmcv==1.7.1
 ```
 
+####
+Install rsifewshot package by:
+```shell
+git clone https://github.com/zhu-xlab/ST-FSOD.git
+cd ST-FSOD
+pip install -e .
+```
+
 #### DIOR datasets
 1. Download the dataset at https://gcheng-nwpu.github.io/#Datasets
 2. Put the four download .zip files in /path/to/your_datasets/DIOR
