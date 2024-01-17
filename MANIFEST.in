@@ -1,0 +1,6 @@
+include requirements/*.txt
+include rsifewshot/VERSION
+include rsifewshot/.mim/model-index.yml
+include rsifewshot/.mim/demo/*/*
+recursive-include rsifewshot/.mim/configs *.py *.yml
+recursive-include rsifewshot/.mim/tools *.sh *.py

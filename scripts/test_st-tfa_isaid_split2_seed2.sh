@@ -1,0 +1,3 @@
+python tools/detection/test.py configs/detection/st_tfa/isaid/split2/seed2/st-tfa/st-tfa_maskrcnn_r50_isaid-split2_seed2_10shot-fine-tuning.py work_dirs/st-tfa_maskrcnn_r50_isaid-split2_seed2_10shot-fine-tuning/iter_2000.pth --eval='bbox'
+python tools/detection/test.py configs/detection/st_tfa/isaid/split2/seed2/st-tfa/st-tfa_maskrcnn_r50_isaid-split2_seed2_50shot-fine-tuning.py work_dirs/st-tfa_maskrcnn_r50_isaid-split2_seed2_50shot-fine-tuning/iter_8000.pth --eval='bbox'
+python tools/detection/test.py configs/detection/st_tfa/isaid/split2/seed2/st-tfa/st-tfa_maskrcnn_r50_isaid-split2_seed2_100shot-fine-tuning.py work_dirs/st-tfa_maskrcnn_r50_isaid-split2_seed2_100shot-fine-tuning/iter_8000.pth --eval='bbox'

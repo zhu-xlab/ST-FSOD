@@ -1,0 +1,15 @@
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_roi-thre60_maskrcnn_r50_isaid-split1_seed0_10shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_roi-thre60_maskrcnn_r50_isaid-split1_seed0_50shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_roi-thre60_maskrcnn_r50_isaid-split1_seed0_100shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_roi-thre90_maskrcnn_r50_isaid-split1_seed0_10shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_roi-thre90_maskrcnn_r50_isaid-split1_seed0_50shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_roi-thre90_maskrcnn_r50_isaid-split1_seed0_100shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_rpn-thre60_maskrcnn_r50_isaid-split1_seed0_10shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_rpn-thre60_maskrcnn_r50_isaid-split1_seed0_50shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_rpn-thre60_maskrcnn_r50_isaid-split1_seed0_100shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_rpn-thre90_maskrcnn_r50_isaid-split1_seed0_10shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_rpn-thre90_maskrcnn_r50_isaid-split1_seed0_50shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_rpn-thre90_maskrcnn_r50_isaid-split1_seed0_100shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_alpha99_maskrcnn_r50_isaid-split1_seed0_10shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_alpha99_maskrcnn_r50_isaid-split1_seed0_50shot-fine-tuning.py
+python tools/detection/train.py configs/detection/st_tfa/isaid/split1/seed0/st-tfa_sensitivity/st-tfa_alpha99_maskrcnn_r50_isaid-split1_seed0_100shot-fine-tuning.py
