@@ -1,7 +1,7 @@
 # ST-FSOD
 Official implementation of TGRS paper: Few-shot Object Detection in Remote Sensing: Lifting the Curse of Incompletely Annotated Novel Objects
 
-## Prepare the Datasets
+### Prepare the Datasets
 #### Install Dataset4EO
 We use Dataset4EO to handle our data loading. Dataset4EO is a composable data loading package based on TorchData. More information can be found at https://github.com/EarthNets/Dataset4EO.
 
@@ -28,7 +28,7 @@ datapipe_root = 'path/to/your_datasets/DIOR'
 #### NWPU-VHR10.v2 datasets
 TODO: add support to NWPU-VHR10.v2 in Dataset4EO
 
-## Train the models
+### Train the models
 #### Perform Base Training
 1. Train the base model using script:
 ```shell
@@ -60,7 +60,7 @@ python tools/detection/train.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fso
 seed = 42
 ```
 
-## Evaluation
+### Evaluation
 #### Evaluate the base model
 ```shell
 python tools/detection/test.py configs/st_fsod/dior/split1/st-fsod_maskrcnn_r101_40k_dior-split1_base-training.py --work-dir work_dirs/st-fsod_maskrcnn_r101_40k_dior-split1_base-training/iter_40000.pth
@@ -74,7 +74,7 @@ python tools/detection/test.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod
 ```
 Note that one should choose the checkpoints to be evaluated according to the validation results (which can be seen in the training log). We noticed that the variances of the accuracies among different checkpoints are quite large, which indicates the validation process is neccessary.
 
-## Acknowledgement
+### Acknowledgement
 https://github.com/EarthNets
 
 https://github.com/open-mmlab/mmfewshot
