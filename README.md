@@ -50,7 +50,7 @@ load_from = ('work_dirs/path/to/your/model.pth')
 ```
 One may need to change the split number, seed number, dataset name and number shots accordingly.
 
-3. Train the fine-tuning models:
+3. Train the fine-tuned models:
 ```shell
 python tools/detection/train.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py
 ```
@@ -67,7 +67,7 @@ python tools/detection/test.py configs/st_fsod/dior/split1/st-fsod_maskrcnn_r101
 ```
 Change the dataset name, split number and iteration number of the checkpoint accordingly.
 
-#### Evaluate the fine-tuning model
+#### Evaluate the fine-tuned model
 The evaluation script has the same format as above:
 ```shell
 python tools/detection/test.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py --work-dir work_dirs/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning/iter_1000.pth --eval='mAP'
