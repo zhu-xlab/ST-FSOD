@@ -26,3 +26,6 @@ model = dict(
 
 # using regular sampler can get a better base model
 use_infinite_sampler = False
+evaluation = dict(
+    class_splits=['BASE_CLASSES_SPLIT1'],
+)

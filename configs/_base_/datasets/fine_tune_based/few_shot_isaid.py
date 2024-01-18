@@ -82,8 +82,8 @@ data = dict(
                 ann_file = '../../Datasets/Dataset4EO/iSAID_patches/val_1k/instancesonly_filtered_val_1k.json'
             ),
         ],
-        # img_prefix=data_root + 'val/images',
-        img_prefix=data_root + 'val_1k/images',
+        img_prefix=data_root + 'val/images',
+        # img_prefix=data_root + 'val_1k/images',
         pipeline=test_pipeline,
         classes=None,
         instance_wise=False

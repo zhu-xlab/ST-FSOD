@@ -139,14 +139,14 @@ log_config = dict(
     hooks=[
         dict(type='TextLoggerHook'),
         # dict(type='TensorboardLoggerHook')
-        dict(type='RSIDetWandbHook',
-             init_kwargs=init_kwargs,
-             interval=201,
-             log_checkpoint=False,
-             log_checkpoint_metadata=False,
-             num_eval_images=100,
-             bbox_score_thr=0.0,
-             eval_after_run=True)
+        # dict(type='RSIDetWandbHook',
+        #      init_kwargs=init_kwargs,
+        #      interval=201,
+        #      log_checkpoint=False,
+        #      log_checkpoint_metadata=False,
+        #      num_eval_images=100,
+        #      bbox_score_thr=0.0,
+        #      eval_after_run=True)
     ])
 
 evaluation = dict(

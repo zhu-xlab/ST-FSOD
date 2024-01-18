@@ -94,8 +94,7 @@ data = dict(
                 type='datapipe',
                 datapipe_name=datapipe_name,
                 datapipe_root=datapipe_root,
-                datapipe_split='test_1k'
-                # datapipe_split='val'
+                datapipe_split='val'
             ),
         ],
         pipeline=test_pipeline,

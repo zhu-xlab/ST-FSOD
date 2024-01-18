@@ -104,8 +104,8 @@ def single_gpu_test(model: nn.Module,
             result = [temp['bbox_results'] for temp in result]
 
         results.extend(result)
-
         prog_bar.update(batch_size)
+
     return results
 
 
