@@ -77,7 +77,7 @@ One may need to change the split number, seed number, dataset name and number sh
 python tools/detection/train.py configs/st_fsod/dior/split1/seed0/st-fsod/st-fsod_maskrcnn_r101_dior-split1_seed0_3shot-fine-tuning.py
 ```
 
-4. If you would like to use a different seed number, e.g., 42, simply modifying the corresponding configuration file:
+4. If you would like to use a different seed number, e.g., 42, simply modify the corresponding configuration file:
 ```shell
 seed = 42
 ```
