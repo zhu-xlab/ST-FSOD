@@ -11,10 +11,18 @@ cd Dataset4EO
 sh install_requirements.sh
 pip install -e .
 ```
+
 #### Install RSI-Detection
 ```
 git clone https://github.com/EarthNets/RSI-Detection.git
 cd RSI-Detection
+pip install -e .
+```
+
+#### Install rsifewshot package
+```shell
+git clone https://github.com/zhu-xlab/ST-FSOD.git
+cd ST-FSOD
 pip install -e .
 ```
 
@@ -24,13 +32,6 @@ torch==1.13.1+cu117
 torchdata==0.5.1
 torchvision==0.14.1
 mmcv==1.7.1
-```
-
-#### Install rsifewshot package
-```shell
-git clone https://github.com/zhu-xlab/ST-FSOD.git
-cd ST-FSOD
-pip install -e .
 ```
 
 #### DIOR datasets
