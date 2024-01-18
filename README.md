@@ -11,6 +11,13 @@ cd Dataset4EO
 sh install_requirements.sh
 pip install -e .
 ```
+#### Install RSI-Detection
+```
+git clone https://github.com/EarthNets/RSI-Detection.git
+cd RSI-Detection
+pip install -e .
+```
+
 To set up the environment smoothly, we provide the version information of some important packages:
 ```shell
 torch==1.13.1+cu117
