@@ -12,13 +12,13 @@ conda activate st_fsod
 mim uninstall mmcv-full
 mim install mmcv-full==1.7.1
 ```
-3. Install Dataset4EO
+3. Install Dataset4EO.
+   
 We use Dataset4EO to handle our data loading. Dataset4EO is a composable data loading package based on TorchData. More information can be found at https://github.com/EarthNets/Dataset4EO.
 
 ```shell
 git clone https://github.com/EarthNets/Dataset4EO.git
 cd Dataset4EO
-sh install_requirements.sh
 pip install -e .
 ```
 
