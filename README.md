@@ -1,8 +1,18 @@
 # ST-FSOD
 Official implementation of TGRS paper: Few-shot Object Detection in Remote Sensing: Lifting the Curse of Incompletely Annotated Novel Objects
 
-### Prepare the Datasets
-#### Install Dataset4EO
+### Installation
+1. Create a conda environment
+```
+conda env create -f environment.yaml
+conda activate st_fsod
+```
+2. Re-install mmcv (need to re-compile some C-related packages)
+```
+mim uninstall mmcv-full
+mim install mmcv-full==1.7.1
+```
+3. Install Dataset4EO
 We use Dataset4EO to handle our data loading. Dataset4EO is a composable data loading package based on TorchData. More information can be found at https://github.com/EarthNets/Dataset4EO.
 
 ```shell
@@ -12,28 +22,21 @@ sh install_requirements.sh
 pip install -e .
 ```
 
-#### Install RSI-Detection
+4. Install RSI-Detection
 ```
 git clone https://github.com/EarthNets/RSI-Detection.git
 cd RSI-Detection
 pip install -e .
 ```
 
-#### Install rsifewshot package
+5. Install rsifewshot package
 ```shell
 git clone https://github.com/zhu-xlab/ST-FSOD.git
 cd ST-FSOD
 pip install -e .
 ```
 
-To set up the environment smoothly, we provide the version information of some important packages:
-```shell
-torch==1.13.1+cu117
-torchdata==0.5.1
-torchvision==0.14.1
-mmcv==1.7.1
-```
-
+### Prepare the Datasets
 #### DIOR datasets
 1. Download the dataset at https://gcheng-nwpu.github.io/#Datasets
 2. Put the four download .zip files in /path/to/your_datasets/DIOR
